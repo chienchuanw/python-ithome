@@ -109,7 +109,7 @@ fruits[0] = 'apple' # TypeError: 'tuple' object does not support item assignment
 
 ### Joining Tuples
 
-We can join two or more tuples using + operator
+We can join two or more tuples using `+` operator
 
 ```py
 fruits = ('banana', 'orange', 'mango', 'lemon')
