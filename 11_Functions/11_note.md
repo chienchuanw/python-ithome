@@ -265,9 +265,9 @@ If we do not return a value with a function, then our function is returning `Non
     print(find_even_numbers(10))
     ```
 
-### Function with Default Parameters
+### Function with Default Arguments
 
-We can also give parameters a default. So when invoke a function without passing an argument, the function will use the default value instead.
+We can also give a default argument. So when invoke a function without passing an argument, the function will use the default argument instead.
 
 ```py
 # Syntax
