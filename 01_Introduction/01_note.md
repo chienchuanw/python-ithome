@@ -4,7 +4,7 @@
 
 檢查目前安裝的 Python 版本  
 
-```py
+```console
 python --version
 ```
 
