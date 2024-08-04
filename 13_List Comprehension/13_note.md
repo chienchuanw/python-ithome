@@ -179,7 +179,7 @@ print(two_power_of_five)  # 32
    ```py
    names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
    output
-   ['Asabeneh Yetaeyeh', 'David Smith', 'Donald Trump', 'Bill Gates']
+   ['Asabeneh Yetayeh', 'David Smith', 'Donald Trump', 'Bill Gates']
    ```
 
 7. Write a lambda function which can solve a slope or y-intercept of linear functions.
