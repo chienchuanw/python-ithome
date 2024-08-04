@@ -328,7 +328,7 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 5. Use filter to filter out countries having exactly six characters.
 6. Use filter to filter out countries containing six letters and more in the country list.
 7. Use filter to filter out countries starting with an 'E'
-8. Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
+8. Chain two or more list iterators (eg. list.map(callback).filter(callback).reduce(callback))
 9. Declare a function called get_string_lists which takes a list as a parameter and then returns a list containing only string items.
 10. Use reduce to sum all the numbers in the numbers list.
 11. Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
