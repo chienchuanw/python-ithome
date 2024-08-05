@@ -152,7 +152,9 @@ from functools import reduce
 
 def sum_numbers(input_list: list) -> Union[int, float]:
     try:
-        return reduce(lambda x, y: x + y, input_list)
+        if len(input_list):
+            return reduce(lambda x, y: x + y, input_list)
+        return 0
     except Exception as e:
         return e
 
@@ -163,14 +165,99 @@ class TestSumNumbers(unittest.TestCase):
         expected_output = 15
         self.assertEqual(sum_numbers(input_list), expected_output)
 
+    def test_float_sum(self):
+        input_list = [1.5, 2.5, 3.0]
+        expected_output = 7.0
+        self.assertEqual(sum_numbers(input_list), expected_output)
+
+    def test_empty(self):
+        input_list = []
+        expected_output = 0
+        self.assertEqual(sum_numbers(input_list), expected_output)
+
+    def test_one_item(self):
+        input_list = [10]
+        expected_output = 10
+        self.assertEqual(sum_numbers(input_list), expected_output)
+
+    def test_mixed_sum(self):
+        input_list = [1, -2, 3, -4, 5]
+        expected_output = 3
+        self.assertEqual(sum_numbers(input_list), expected_output)
+
+    def test_big_sum(self):
+        input_list = [1000000000, 2000000000, 3000000000]
+        expected_output = 6000000000
+        self.assertEqual(sum_numbers(input_list), expected_output)
+
 
 unittest.main()
 
 
 # 11. Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
-# 12. Declare a function called categorize_countries that returns a list of countries with some common pattern (you can find the [countries list](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) in this repository as countries.js(eg 'land', 'ia', 'island', 'stan')).
+
+from functools import reduce
+
+countries = ["Estonia", "Finland", "Sweden", "Denmark", "Norway", "Iceland"]
+
+output_sentence = reduce(lambda x, y: x + ", " + y, countries)
+print(output_sentence)
+
+
+# 12. Declare a function called categorize_countries that returns a list of countries with some common pattern (you can find the [countries list](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) in this repository as countries.py (eg 'land', 'ia', 'island', 'stan')).
+
+from countries import countries
+
+
+def categorize_countries(input_list: list) -> list:
+    countries_with_land = list(filter(lambda country: "land" in country, input_list))
+    return countries_with_land
+
+
+print(categorize_countries(countries))
+
+
 # 13. Create a function returning a dictionary, where keys stand for starting letters of countries and values are the number of country names starting with that letter.
-# 14. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
+
+from countries import countries
+from string import ascii_uppercase
+
+
+def country_dict(input_list: list) -> dict:
+    result = dict()
+
+    for letter in ascii_uppercase:
+
+        count = len(
+            list(filter(lambda country: country.startswith(letter), input_list))
+        )
+
+        result[letter] = count
+
+    return result
+
+
+print(country_dict(countries))
+
+
+# 14. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.py list in the data folder.
+
+from countries import countries
+
+
+def get_first_ten_countries(function):
+    def wrapper():
+        pass
+
+
+@get_first_ten_countries
+def get_countries(input_list: list) -> list:
+    return input_list
+
+
+print(get_countries(countries))
+
+
 # 15. Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
 
 # ### 高階題
