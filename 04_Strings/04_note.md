@@ -141,7 +141,7 @@ print('{} ** {} = {}'.format(a, b, a ** b))
 4 // 3 = 1
 4 ** 3 = 64
 
-# Strings  and numbers
+# Strings and numbers
 radius = 10
 pi = 3.14
 area = pi * radius ** 2
