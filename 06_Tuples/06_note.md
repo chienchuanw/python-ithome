@@ -46,7 +46,7 @@ print(len(tuple_three)) # 3
     #             0         1        2         3 
     first_fruit = fruits[0]
     second_fruit = fruits[1]
-    last_index =len(fruits) - 1
+    last_index = len(fruits) - 1
     last_fruit = fruits[las_index]
     ```
 
