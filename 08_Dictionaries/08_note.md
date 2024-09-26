@@ -87,7 +87,7 @@ person = {
         'street':'Space street',
         'zipcode':'02210'
     }
-    }
+}
 print(person['first_name']) # Asabeneh
 print(person['country'])    # Finland
 print(person['skills'])     # ['JavaScript', 'React', 'Node', 'MongoDB', 'Python']
